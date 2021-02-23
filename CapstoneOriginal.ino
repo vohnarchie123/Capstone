@@ -1,9 +1,14 @@
-#define trigPin 13
-#define echoPin 12
+#define trigPin 7
+#define echoPin 6
 #define led 11
 #define led2 10
 #include <Servo.h> 
- 
+
+//pins:
+//trigpin D7
+//echopin D6
+//servopin D9
+
 Servo myservo;  
 int pos = 0;   
 int measure;
@@ -23,10 +28,10 @@ void loop() {
   int temp = distance/2.2222;
   measure = 180 - temp;
   myservo.write(measure);
-//  Serial.print("distance:");
-//  Serial.println(distance);
-//  Serial.print("servo:");
-//  Serial.println(measure);
+ Serial.print("distance:");
+ Serial.println(distance);
+  Serial.print("servo:");
+  Serial.println(measure);
   };
   delay(500);
 } 
