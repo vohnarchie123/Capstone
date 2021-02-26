@@ -1,5 +1,5 @@
-#define trigPin 7
-#define echoPin 6
+#define trigPin 2
+#define echoPin 3
 #define led 11
 #define led2 10
 #include <Servo.h> 
@@ -23,6 +23,8 @@ void setup() {
 }
 
 void loop() {
+  digitalWrite(led, HIGH)
+  
   int  distance = getDistance();
   if (distance <= 400){
   int temp = distance/2.2222;
